@@ -1,0 +1,8 @@
+werkzeug
+simplejson
+requests
+matplotlib
+scipy
+seaborn
+numpy
+jupyter
