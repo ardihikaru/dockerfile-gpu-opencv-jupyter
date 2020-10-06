@@ -1,3 +1,7 @@
+## 1.1.1 (十月 07, 2020)
+  - update README: typos
+  - Merge branch 'release/1.2' into develop
+
 ## 1.1.0 (十月 07, 2020)
   - update README: add steps how to install `NVIDIA-Docker2`
   - Merge branch 'bugfix/1.0.1' into develop
