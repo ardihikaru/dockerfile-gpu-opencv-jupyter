@@ -11,7 +11,7 @@
     - Run container*
         - **CPU Version**: `$ docker run --name my-jupyter -d -p 8888:8888 -v <desired_path>/src/:/src/ ardihikaru/jupyter:1.0`
         - **GPU Version** (You need to install [NVIDIA-Docker2](https://cnvrg.io/how-to-setup-docker-and-nvidia-docker-2-0-on-ubuntu-18-04/)): 
-            `$ docker run --name my-jupyter -d -p 8888:8888 -v <desired_path>/src/:/src/ ardihikaru/jupyter:1.0`
+            `$ docker run --runtime=nvidia --name my-jupyter -d -p 8888:8888 -v <desired_path>/src/:/src/ ardihikaru/jupyter:1.0`
     
         ***For example here**, I changed `<desired_path>` into this path: `/home/ardi/my-jupyter`
     - Make sure that the container is running (it will say `Up xx minutes`):
