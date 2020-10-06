@@ -29,3 +29,23 @@
         ```
     - Copy the token, e.g., `8750501cab033e0713e88505b2fe32b7da4d712cc469c638` and use it to login on the web-based jupyter
  6. Enjoy!
+ 
+ ## Other important resource
+ - **Install NVIDIA-Docker2**
+    - Install dep: `$ sudo apt-get install apt-transport-https ca-certificates curl software-properties-common`
+    - Setting the GPG and remote repo for the package:
+        ```
+        $ curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | \
+            sudo apt-key add -
+            distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+      
+        $ curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | \
+            sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+        ```
+    - Update again: `$ sudo apt-get update
+    - Install nvidia-docker (2) and reload the Docker daemon configurations:
+        ```
+        $ sudo apt-get install -y nvidia-docker2
+        $ sudo pkill -SIGHUP dockerd
+        ```
+    - Test: `$ docker run --runtime=nvidia --rm nvidia/cuda:9.0-base nvidia-smi`
